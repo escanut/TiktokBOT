@@ -145,11 +145,17 @@ def comment_on_page(page, links, comment_list):
             print(f"Error while commenting on {link}: {e}")
 
 def scrape(page, hashtag, maximum_post, comment_list):
+    page.click("button[role='searchbox']")
 
-    page.fill("input[type='search']", hashtag)
     random_delay()
 
-    page.click("button[type='submit']")
+    input_selector = 'input[data-e2e="search-user-input"]'
+
+    random_delay()
+
+    page.keyboard.type(hashtag)
+
+    page.keyboard.press("Enter")
     time.sleep(20)
 
     handle_captcha(page)

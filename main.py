@@ -10,6 +10,6 @@ m_password = "Ihateuall1#"
 
 maximum_posts = 4
 
-m_hashtag = "#boruto"
+m_hashtag = "#mobpsycho"
 
 login_tiktok(m_username, m_password, m_hashtag, maximum_posts, comment_list)
